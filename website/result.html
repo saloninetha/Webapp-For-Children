@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        h1 {
+            font-size: 250px;
+            color: red;
+            animation: blink 1s infinite;
+        }
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FAILED</h1>
+        
+    </div>
+    <script>
+        // Get the roll number from the URL query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const rollNumber = urlParams.get('rollNumber');
+
+        // Display the roll number on the page
+        document.getElementById('rollNumberDisplay').textContent = 'Roll Number: ' + rollNumber;
+    </script>
+</body>
+</html>
+

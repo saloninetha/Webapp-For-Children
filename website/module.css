@@ -1,0 +1,138 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('./img/bg5.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
+/* Header Styles */
+header {
+  background-color: #0072ff;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Main Section Styles */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.video-section {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+  max-width: 800px;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+  text-align: justify;
+}
+
+.quote .head {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #0072ff;
+  margin-bottom: 10px;
+}
+
+.quote p {
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #0072ff;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  position: relative;
+  z-index: 1000;
+  margin-top: auto;
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background: url('https://cdn.svgator.com/images/2022/01/wave-animation-example.svg') repeat-x;
+  animation: wave 10s infinite linear;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.social_icon {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.social_icon li {
+  font-size: 1.8em;
+}
+
+.social_icon a {
+  color: white;
+}
+
+.social_icon a:hover {
+  color: #f0f0f0;
+}
+

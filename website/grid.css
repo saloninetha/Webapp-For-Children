@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffefd5; /* Light pastel color for the background */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-image: url('./img/bg10.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 5vw;
+    color: #ff4500; /* Bright orange color for the heading */
+    text-shadow: 2px 2px #ffa07a; /* Light shadow for the heading */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 90vw;
+    height: 60vh;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #fff8dc;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffdab9; /* Peach color */
+    border: 2px solid #cd5c5c; /* Indian red color */
+    cursor: pointer;
+    font-size: 3vw;
+    font-weight: bold;
+    color: #2f4f4f; /* Dark slate gray */
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.option {
+    background-color: #add8e6; /* Light blue */
+}
+
+.answer {
+    background-color: #ffcccb; /* Light green */
+}
+
+.selected {
+    background-color: orange !important;
+}
+
+.correct {
+    background-color: green !important;
+}
+
+.incorrect {
+    background-color: red !important;
+}
+
+

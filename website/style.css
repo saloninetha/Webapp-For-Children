@@ -1,0 +1,31 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  p {
+    color: #555;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+
+  .quote {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-left: 4px solid #3498db;
+    margin: 20px 0;
+  }
+
+  .highlight {
+    color: #e44d26;
+    font-weight: bold;
+  }

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="community.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Community Support</title>
+    <style>
+        /* Reset and General Styles */
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #0072ff;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.1em;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        /* Main Content Styles */
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 2em;
+            color: #0072ff;
+            margin-bottom: 10px;
+        }
+
+        section ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        section ul li {
+            margin-bottom: 15px;
+        }
+
+        section ul li a {
+            color: #0072ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown {
+            margin-top: 5px;
+            padding-left: 20px;
+            font-size: 0.9em;
+        }
+
+        .dropdown li {
+            margin-bottom: 5px;
+        }
+
+        .dropdown li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #0072ff;
+            color: white;
+            text-align: center;
+            padding: 2em 0; /* Increased padding for better spacing */
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 1.1em;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .follow-us {
+            margin-top: 20px; /* Added margin for spacing */
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+
+        .social-icons li {
+            margin: 0 10px;
+        }
+
+        .social-icons li a {
+            color: white;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons li a:hover {
+            color: #eee;
+        }
+
+        .community-support {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 20px; /* Added margin for spacing */
+            display: inline-block;
+        }
+
+        .community-support:hover {
+            background-color: white;
+            color: #0072ff;
+        }
+
+        .waves {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 20%;
+            background: url('https://cdn.svgator.com/images/2022/01/wave-animation-example.svg') repeat-x;
+            animation: wave 10s infinite linear;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Community Support</h1>
+        <p>Empowering families and protecting children</p>
+    </header>
+
+    <section id="government-info">
+        <h2>Government Resources</h2>
+        <ul>
+            <li>
+                <a href="https://www.wcd.nic.in/" target="_blank">Ministry of Women and Child Development (MWCD)</a>
+                <ul class="dropdown">
+                    <li><a href="https://wcd.nic.in/" target="_blank">Website</a></li>
+                    <li>Contact Email: <a href="mailto:wcdmin-wcd@nic.in">wcdmin-wcd@nic.in</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="http://ncpcr.gov.in/" target="_blank">National Commission for Protection of Child Rights (NCPCR)</a>
+                <ul class="dropdown">
+                    <li><a href="http://ncpcr.gov.in/" target="_blank">Website</a></li>
+                    <li>Contact Email: <a href="mailto:cp.ncpcr@nic.in">cp.ncpcr@nic.in</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="support-emails">
+        <h2>Support Emails</h2>
+        <ul>
+            <li>Email: <a href="mailto:support@entitled.ac.in">support@.ac.in</a></li>
+            <li>Email: <a href="mailto:helpdesk@example.com">helpdesk@.ac.in</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <div class="follow-us">
+            <p>Follow us</p>
+            <ul class="social-icons">
+                <li><a href="https://facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://twitter.com/"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://in.linkedin.com/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li><a href="https://instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            </ul>
+        </div>
+        <a href="community.html" class="community-support">Community Support</a>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
+
+

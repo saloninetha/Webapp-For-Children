@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/collection/components/icon.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+            overflow: hidden;
+            position: relative;
+            background-image: url('./img/bg2.jpg');
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .background-doodles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: url('https://www.transparenttextures.com/patterns/doodles.png') repeat;
+            opacity: 0.3;
+        }
+        .login-container {
+            background: #FFF;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .login-header {
+            font-family: 'Pacifico', cursive;
+            font-size: 32px;
+            color: #00c6ff;
+            margin-bottom: 20px;
+        }
+        .login-input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .login-button {
+            width: 100%;
+            padding: 14px;
+            background-color: #00c6ff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .login-button:hover {
+            background-color: #0072ff;
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #FFF;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+        }
+        .social-icon {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .social-icon li {
+            margin: 0 10px;
+        }
+        .social-icon a {
+            color: #00c6ff;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+        .social-icon a:hover {
+            color: #0072ff;
+        }
+        .community-link {
+            text-decoration: none;
+            color: #00c6ff;
+            font-size: 18px;
+            display: block;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+        .community-link:hover {
+            color: #0072ff;
+        }
+        .waves {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .wave {
+            width: 20px;
+            height: 20px;
+            background-color: #00c6ff;
+            border-radius: 50%;
+            margin: 0 5px;
+            animation: wave-animation 1.5s infinite ease-in-out;
+        }
+        @keyframes wave-animation {
+            0%, 40%, 100% {
+                transform: initial;
+            }
+            20% {
+                transform: translateY(-15px);
+            }
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #0072ff;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-size: 16px;
+        }
+        .home-button:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <a href="./index.html" class="home-button">Home</a>
+    
+    <div class="background-doodles"></div>
+    <div class="login-container">
+        <div class="login-header">Welcome Back!</div>
+        <form>
+            <input type="text" class="login-input" placeholder="Username" required>
+            <input type="password" class="login-input" placeholder="Password" required>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="waves">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        <ul class="social-icon">
+            <li><a href="https://facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://twitter.com/" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="https://instagram.com/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <a href="./community.html" class="community-link">Community Support</a>
+    </footer>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

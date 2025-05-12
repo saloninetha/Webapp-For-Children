@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Modules</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #ffefd5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+      background-image: url('./img/bg1.jpg');
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+            
+    }
+
+    header {
+      background: linear-gradient(90deg, #ef676c 0%, #ed9d86 99%, #fad0c4 100%);
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      overflow-x: auto;
+      padding: 2em;
+      flex: 1;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%);
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin: 1em;
+      padding: 2em;
+      width: 300px;
+      height: 400px;
+      text-align: center;
+      transition: transform 0.2s, background 0.2s;
+      flex-shrink: 0;
+      animation: slide-in 0.5s ease-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #ff5e62 0%, #ff9966 100%);
+    }
+
+    .card h2 {
+      font-size: 1.8em; /* Updated font size */
+      color: #fff;
+      margin-bottom: 1em;
+    }
+
+    .card label {
+      font-size: 1.3em; /* Updated font size */
+      color: #fff;
+      align-self: flex-start;
+    }
+
+    .card select {
+      width: 100%;
+      padding: 0.5em;
+      font-size: 1.2em; /* Updated font size */
+      border: 2px solid #ff5722;
+      border-radius: 4px;
+      background: #fff;
+      margin-top: auto;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #2661c0 0%, #3eb8f0 100%);
+      text-align: center;
+      padding: 2em 0;
+      margin-top: auto;
+      position: relative;
+    }
+
+    .follow-us {
+      margin: 1em 0;
+    }
+
+    .follow-us p {
+      font-size: 1.5em;
+      color: #fff;
+    }
+
+    .social_icon {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+    }
+
+    .social_icon li {
+      display: inline;
+    }
+
+    .social_icon a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5em;
+    }
+
+    .social_icon a:hover {
+      color: #ff5722;
+    }
+
+    .copyright {
+      display: block;
+      margin-top: 1em;
+      font-size: 1.2em;
+      color: #fff;
+    }
+
+    @keyframes wave {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(-25%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .wave {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url('https://cdn.svgator.com/images/2022/01/wave-animation-example.svg') repeat-x;
+      animation: wave 10s infinite linear;
+      opacity: 0.6;
+    }
+
+    #wave1 {
+      z-index: 1;
+      bottom: 0;
+    }
+
+    #wave2 {
+      z-index: 2;
+      bottom: 10px;
+      opacity: 0.8;
+    }
+
+    #wave3 {
+      z-index: 3;
+      bottom: 15px;
+      opacity: 0.6;
+    }
+
+    #wave4 {
+      z-index: 4;
+      bottom: 20px;
+      opacity: 0.4;
+    }
+
+    @keyframes slide-in {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .home-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #0072ff;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: #003366;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="./index.html" class="home-button">Home</a>
+
+  <header>
+    <h1>Modules</h1>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Module 1</h2>
+      <label for="chapters1">The Child Labour (Prohibition and Regulation) Act 1986</label>
+      <select id="chapters1" class="chapter-dropdown">
+        <option>Options</option>
+        <option value="Module 1">Firecracker Chains to Freedom (Hindi)</option>
+        <option value="Module 2">Firecracker Chains to Freedom (English)</option>
+      </select>
+    </div>
+    <div class="card">
+      <h2>Module 2</h2>
+      <label for="chapters2">The Women's and Children's (Licensing) Act 1956</label>
+      <select id="chapters2" class="chapter-dropdown">
+        <option>Options</option>
+        <option value="Module 3">Breaking Chains: A Tale of Liberation Under the Women's and Children's (Licensing) Act,
+          1956 (Hindi)</option>
+        <option value="Module 4">Breaking Chains: A Tale of Liberation Under the Women's and Children's (Licensing) Act,
+          1956 (English)</option>
+      </select>
+    </div>
+    <div class="card">
+      <h2>Module 3</h2>
+      <label for="chapters3">The Bonded Labour System (Abolition) Act 1976</label>
+      <select id="chapters3" class="chapter-dropdown">
+        <option>Options</option>
+        <option value="Module 5">Bonds Unbound: An escape from Bonded Labour's Grasp (Hindi)</option>
+        <option value="Module 6">Bonds Unbound: An escape from Bonded Labour's Grasp (English)</option>
+      </select>
+    </div>
+    <div class="card">
+      <h2>Module 4</h2>
+      <label for="chapters7">The Persons with Disabilities (Equal Opportunities Protection of Rights and Full
+        Participation) Act 1995</label>
+      <select id="chapters7" class="chapter-dropdown">
+        <option>Options</option>
+        <option value="Module 13">Breaking Barrier: Triumph of Inclusion under the Disabilities Act (Hindi)</option>
+        <option value="Module 14">Breaking Barrier: Triumph of Inclusion under the Disabilities Act (English)</option>
+      </select>
+    </div>
+    <div class="card">
+      <h2>Module 5</h2>
+      <label for="chapters8">The Child Marriage Restraint Act 1929</label>
+      <select id="chapters8" class="chapter-dropdown">
+        <option>Options</option>
+        <option value="Module 15">Quest for Freedom from Child Marriage (Hindi)</option>
+        <option value="Module 16">Quest for Freedom from Child Marriage (English)</option>
+      </select>
+    </div>
+    <div class="card">
+      <h2>Module 6</h2>
+      <label for="chapters4">Right to Health</label>
+      <select id="chapters4" class="chapter-dropdown">
+        <option>Options</option>
+        <option value="Module 7">Nurturing Dreams, Claiming Rights: Journey through the Right to Health (Hindi)</option>
+        <option value="Module 8">Nurturing Dreams, Claiming Rights: Journey through the Right to Health (English)</option>
+      </select>
+    </div>
+    <div class="card">
+      <h2>Module 7</h2>
+      <label for="chapters5">Indian Penal Code 1860</label>
+      <select id="chapters5" class="chapter-dropdown">
+        <option>Options</option>
+        <option value="Module 9">Codes of Justice: A Journey into the Indian Penal Mysteries (Hindi)</option>
+        <option value="Module 10">Codes of Justice: A Journey into the Indian Penal Mysteries (English)</option>
+      </select>
+    </div>
+    <div class="card">
+      <h2>Module 8</h2>
+      <label for="chapters6">The Immoral Traffic (Prevention) Act 1956</label>
+      <select id="chapters6" class="chapter-dropdown">
+        <option>Options</option>
+        <option value="Module 11">Codes of Justice (Hindi)</option>
+        <option value="Module 12">Codes of Justice (English)</option>
+      </select>
+    </div>
+    <div class="card">
+      <h2>Module 9</h2>
+      <label for="chapters9">The Juvenile Justice (Care and Protection of Children) Act 2000</label>
+      <select id="chapters9" class="chapter-dropdown">
+        <option>Options</option>
+        <option value="Module 17">Street Symphony: A Journey to Justice and Redemption (Hindi)</option>
+        <option value="Module 18">Street Symphony: A Journey to Justice and Redemption (English)</option>
+      </select>
+    </div>
+    <div class="card">
+      <h2>Module 10</h2>
+      <label for="chapters10">POCSO Act, 2012</label>
+      <select id="chapters10" class="chapter-dropdown">
+        <option>Options</option>
+        <option value="Module 19">Shielding Innocence: Triumph under the POCSO Act, 2012 (Hindi)</option>
+        <option value="Module 20">Shielding Innocence: Triumph under the POCSO Act, 2012 (English)</option>
+      </select>
+    </div>
+  </div>
+
+  <footer>
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <div class="follow-us">
+      <p>Follow us</p>
+      <ul class="social_icon">
+        <li><a href="https://facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li><a href="https://twitter.com/"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        <li><a href="https://in.linkedin.com/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li><a href="https://instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+      </ul>
+    </div>
+
+    <a href="./community.html" class="copyright">Community Support</a>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
+

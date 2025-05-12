@@ -1,0 +1,154 @@
+body {
+  font-family: 'Comic Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+  background-color: #f0f0f5;
+  background-image: url('./img/bg8.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  
+}
+
+header {
+  background-color: #003366;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.main-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+}
+
+h1, h2 {
+  color: #003366;
+}
+
+.about-us, .mission-section, .team-section {
+  margin-bottom: 2rem;
+}
+
+.team-members {
+  display: flex;
+  gap: 2rem;
+}
+
+.member {
+  background-color: #ffcc00;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  flex: 1;
+}
+
+.member-name {
+  font-size: 1.3rem;
+  color: #003366;
+}
+
+footer {
+  background-color: #003366;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.waves {
+  position: absolute;
+  top: -100px;
+  width: 100%;
+  height: 100px;
+  background: url('waves.png') repeat-x;
+}
+
+.follow-us {
+  margin-bottom: 1rem;
+}
+
+.follow-us p {
+  margin-bottom: 0.5rem;
+}
+
+.social-icon {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon li {
+  display: inline;
+}
+
+.social-icon a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon a:hover {
+  color: #ffcc00;
+}
+
+.community-support {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.community-support:hover {
+  color: #ffcc00;
+}
+
+
+

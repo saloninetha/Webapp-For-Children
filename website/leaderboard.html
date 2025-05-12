@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/collection/components/icon.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FFFBF0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FF4E50 0%, #F9D423 100%);
+            background-image: url('./img/bg7.jpg');
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .leaderboard-container {
+            width: 70%;
+            background: #FFF;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
+            margin-bottom: 60px; /* Ensure space for the fixed footer */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .leaderboard-header {
+            background-color: #FF4E50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 32px;
+            font-family: 'Pacifico', cursive;
+            letter-spacing: 1px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .home-button {
+            background-color: #0072ff;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-size: 16px;
+        }
+        .home-button:hover {
+            background-color: #003366;
+        }
+        .leaderboard-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .leaderboard-table th, .leaderboard-table td {
+            padding: 14px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .leaderboard-table th {
+            background-color: #FFDDC1;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .leaderboard-table tr:hover {
+            background-color: #FFF0E3;
+        }
+        .leaderboard-table td {
+            font-size: 18px;
+        }
+        .sn-cell {
+            width: 10%;
+        }
+        .name-cell {
+            width: 60%;
+        }
+        .score-cell {
+            width: 30%;
+        }
+        /* Footer styles */
+        footer {
+            background-color: #FF4E50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+        }
+        .social-icon {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .social-icon li {
+            margin: 0 10px;
+        }
+        .social-icon a {
+            color: white;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+        .social-icon a:hover {
+            color: #FFFBF0;
+        }
+        .community-link {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            display: block;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+        .community-link:hover {
+            color: #FFFBF0;
+        }
+        .waves {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .wave {
+            width: 20px;
+            height: 20px;
+            background-color: #FFFBF0;
+            border-radius: 50%;
+            margin: 0 5px;
+            animation: wave-animation 1.5s infinite ease-in-out;
+        }
+        @keyframes wave-animation {
+            0%, 40%, 100% {
+                transform: initial;
+            }
+            20% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="leaderboard-container">
+        <header class="leaderboard-header">
+            <div>Leaderboard</div>
+            <a href="./index.html" class="home-button">Home</a>
+        </header>
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th class="sn-cell">S/N</th>
+                    <th class="name-cell">Name</th>
+                    <th class="score-cell">Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>1450</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sam Brown</td>
+                    <td>1400</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Alice Johnson</td>
+                    <td>1375</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Michael Williams</td>
+                    <td>1350</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Linda Davis</td>
+                    <td>1325</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>David Wilson</td>
+                    <td>1300</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="waves">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        <ul class="social-icon">
+            <li><a href="https://facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://twitter.com/" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="https://instagram.com/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <a href="./community.html" class="community-link">Community Support</a>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
+
+
+
+
+

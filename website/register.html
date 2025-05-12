@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+            overflow: hidden;
+            position: relative;
+            background-image: url('./img/bg3.jpg');
+            background-size: 100% 100%;
+            background-position: center;
+            
+
+        }
+
+        .background-doodles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-image: url('https://www.transparenttextures.com/patterns/doodles.png');
+            background-size: cover;
+            opacity: 0.5;
+        }
+
+        .register-container {
+            background: #FFF;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 400px;
+            margin-bottom: 20px; /* Add margin bottom to create space between content and footer */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .register-header {
+            font-family: 'Pacifico', cursive;
+            font-size: 32px;
+            color: #00c6ff;
+            margin-bottom: 20px;
+        }
+
+        .register-input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .register-button {
+            width: 100%;
+            padding: 14px;
+            background-color: #00c6ff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-button:hover {
+            background-color: #0072ff;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
+            text-align: center;
+            padding: 2em 0;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .waves {
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cdn.svgator.com/images/2022/01/wave-animation-example.svg');
+            background-repeat: repeat-x;
+            animation: wave 10s infinite linear;
+            opacity: 0.6;
+        }
+
+        #wave1 {
+            animation-duration: 15s;
+            bottom: 0;
+        }
+
+        #wave2 {
+            animation-duration: 12s;
+            bottom: 10px;
+            opacity: 0.8;
+        }
+
+        #wave3 {
+            animation-duration: 10s;
+            bottom: 15px;
+            opacity: 0.6;
+        }
+
+        #wave4 {
+            animation-duration: 8s;
+            bottom: 20px;
+            opacity: 0.4;
+        }
+
+        .follow-us {
+            margin: 1em 0;
+        }
+
+        .follow-us p {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 0.5em;
+        }
+
+        .social_icon {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+        }
+
+        .social_icon li {
+            display: inline;
+        }
+
+        .social_icon a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .social_icon a:hover {
+            color: #0072ff;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #0072ff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #003366;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-25%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Ensuring the footer stays at the bottom */
+        .content {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="./index.html" class="home-button">Home</a>
+    <div class="background-doodles"></div>
+    <div class="content">
+        <div class="register-container">
+            <div class="register-header">Create an Account</div>
+            <form>
+                <input type="text" class="register-input" placeholder="Username" required><br>
+                <input type="text" class="register-input" placeholder="Parent's Phone Number" required><br>
+                <input type="number" class="register-input" placeholder="Age" required><br>
+                <input type="password" class="register-input" placeholder="Create Password" required><br>
+                <input type="password" class="register-input" placeholder="Confirm Password" required><br>
+                <button type="submit" class="register-button">Register</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <div class="follow-us">
+            <p>Follow us</p>
+            <ul class="social_icon">
+                <li><a href="https://facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://twitter.com/"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://in.linkedin.com/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li><a href="https://instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            </ul>
+        </div>
+
+        <a href="./community.html" class="copyright">Community Support</a>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
+
+
+
